@@ -61,6 +61,7 @@ mod tests {
         let longest = || find_longest_byte_arr(ALL_MSGS);
         let mut cypher;
         for item in ALL_MSGS.iter() {
+            //TODO: add frequency analysis to find the key
             cypher = get_cypher(longest, item);
             dbg!(String::from_utf8(decode(&cypher)).unwrap());
         }
